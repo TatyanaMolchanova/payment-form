@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Payment form</title>
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="...">
+</head>
+<body>
+	<form action="" method="post" name="payment" class="form">
+		<div class="form__head">
+			<div class="form__payer">
+				<div class="form__title">Harold Finch</div>
+				<div class="form__subtitle">
+					your total
+				</div>
+			</div>
+			<div class="form__amount">$88</div>
+		</div>
+		<div class="form__body">
+			<div class="form__group">
+				<label for="number" class="form__label">Credit card number</label>
+				<input type="text" class="form__field" name="number" id="number" required minlength="16" maxlength="16" pattern="[0-9]"></div>
+			<div class="form__group">
+				<label for="month" class="form__label">Expiration date</label>
+				<select name="month" id="" class="form__field form__field--md" required>
+					<option selected disabled value="">Month</options>
+					<option value="1">January</options>
+					<option value="2">February</options>
+					<option value="3">March</options>
+				</select>
+				<select name="year" id="" class="form__field form__field--sm" required>
+					<option value="">Year</option>
+					<option value="2019">2019</option>
+					<option value="2020">2020</option>
+					<option value="2021">2021</option>
+				</select>
+				<div class="form__group">
+					<label class="form__label" for="cvv">CVV</label>
+					<input class="form__field form__field--sm" type="text" name="cvv" id="cvv" minlength="3" maxlength="4" pattern="[0-9]" required>
+					<span>3 or 4 digits - <a href="#">view example</a></span>
+				</div>
+
+			</div>
+			<div class="form__btns">
+				<button type="submit" class="form__btn">Pay</button>
+				<a href="#">Cancel order</a>
+			</div>
+		</div>
+	</form>
+</body>
+</html>

@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+@import 'normalize';
+@import 'mixin';
+
+$offset: 25px;
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font: 10px/1.2 'Montserrat', sans-serif;
+	height: 100%;
+}
+
+body {
+	font-size: 1.3rem;
+	color: #9eabad;
+	min-height: 100%;
+	background-color: #191d21;
+	background-image: url(../img/111.png), linear-gradient(175deg, #565b5c, #191d21);
+	background-position: right center;
+	background-repeat: no-repeat;
+	background-size: auto 100%;
+}
+
+.form {
+	max-width: 340px;
+	width: 98%;
+	min-height: 535px;
+	background-color: #f5f5f5;
+	@include posCenter();
+	&__head,
+	&__body {
+		padding: $offset;
+	}
+	&__head {
+		background-color: #efe5aa;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__btns {
+		border-top: 1px solid #e4e7e8;
+		padding-top: $offset;
+		text-align: center;
+		margin-top: $offset;
+	}
+	&__title {
+		font-size: 1.4rem;
+		color: #6e7f7b;
+	}
+	&__subtitle {
+		font-size: 1rem;
+		color: #a6a28d;
+		text-transform: uppercase;
+	}
+	&__amount {
+		font-size: 3.6rem;
+		color: #6e7f7b;
+		font-weight: 700;
+		padding-left: $offset;
+		max-width: 40%;
+		word-wrap: break-word;
+	}
+	&__btn {
+		width: 100%;
+		padding: 15px;
+		background-color: #25b167;
+		border: 1px solid #25b167;
+		color: #f5f5f5;
+		font-weight: 700;
+		font-size: 2rem;
+		margin-bottom: $offset;
+		@include hover {
+			cursor: pointer;
+			background-color: #f5f5f5;
+			color: #25b167;
+		}
+	}
+	a {
+		text-decoration: none;
+		color: #9eabad;
+		border-bottom: 1px solid #9eabad;
+		@include hover {
+			color: #25b167;
+			border-color: #25b167;
+		}
+	}
+	&__group {
+		margin-top: 20px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__field {
+		padding: 10px;
+		border: 1px solid #9eabad;
+		width: 100%;
+		&--sm {
+			width: 30%
+		}
+		&--md {
+			width: calc(70% - 20px);
+		}
+	}
+	&__label {
+		display: block;
+		padding: 5px;
+		width: 100%;
+	}
+	select {
+		appearance: none;
+		background-image: url(../img/arrow.svg);
+		background-repeat: no-repeat;
+		background-position: right 10px center;
+	}
+}
